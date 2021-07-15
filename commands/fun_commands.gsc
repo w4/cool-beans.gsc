@@ -9,6 +9,14 @@
 *
 */
 
+getFunCommands() {
+    commands = [];
+    commands["Unlimited Ammo"] = ::command_unlimited_ammo;
+    commands["No Recoil"] = ::command_no_recoil;
+    commands["Give Golden Deagle"] = ::command_golden_deagle;
+    return commands;
+}
+
 command_unlimited_ammo() {
     self endon("disconnect");
 

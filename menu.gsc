@@ -110,13 +110,7 @@ getTabs() {
     
     menuItems["Account"] = SpawnStruct();
     menuItems["Account"].required_level = 1;
-    menuItems["Account"].menu_items = [];
-    menuItems["Account"].menu_items["Level 70"] = ::command_level_70;
-    menuItems["Account"].menu_items["Prestige 9"] = ::command_prestige_9;
-    menuItems["Account"].menu_items["Prestige 10"] = ::command_prestige_10;
-    menuItems["Account"].menu_items["Prestige 11"] = ::command_prestige_11; // broken?
-    menuItems["Account"].menu_items["Colourful Classes"] = ::command_colour_classes; // broken?
-    menuItems["Account"].menu_items["Cycle Clantag"] = ::command_clan_tag;
+    menuItems["Account"].menu_items = getAccountCommands();
     
     menuItems["Infections"] = SpawnStruct();
     menuItems["Infections"].required_level = 1;
@@ -125,21 +119,15 @@ getTabs() {
     
     menuItems["Fun"] = SpawnStruct();
     menuItems["Fun"].required_level = 1;
-    menuItems["Fun"].menu_items = [];
-    menuItems["Fun"].menu_items["Unlimited Ammo"] = ::command_unlimited_ammo;
-    menuItems["Fun"].menu_items["No Recoil"] = ::command_no_recoil;
-    menuItems["Fun"].menu_items["Give Golden Deagle"] = ::command_golden_deagle;
+    menuItems["Fun"].menu_items = getFunCommands();
     
     menuItems["Admin"] = SpawnStruct();
     menuItems["Admin"].required_level = 3;
-    menuItems["Admin"].menu_items = [];
-    menuItems["Admin"].menu_items["God Mode"] = ::command_god_mode;
+    menuItems["Admin"].menu_items = getAdminCommands();
     
     menuItems["Host"] = SpawnStruct();
     menuItems["Host"].required_level = 4;
-    menuItems["Host"].menu_items = [];
-    menuItems["Host"].menu_items["Advertise"] = ::command_advertise;
-    menuItems["Host"].menu_items["Toggle Ranked Match"] = ::command_toggle_ranked_match;
+    menuItems["Host"].menu_items = getHostCommands();
     
     return menuItems;
 }

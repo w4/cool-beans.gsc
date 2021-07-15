@@ -9,6 +9,17 @@
 *
 */
 
+getAccountCommands() {
+    commands = [];
+    commands["Level 70"] = ::command_level_70;
+    commands["Prestige 9"] = ::command_prestige_9;
+    commands["Prestige 10"] = ::command_prestige_10;
+    commands["Prestige 11"] = ::command_prestige_11; // broken?
+    commands["Colourful Classes"] = ::command_colour_classes; // broken?
+    commands["Cycle Clantag"] = ::command_clan_tag;
+    return commands;
+}
+
 command_level_70() {
     self setplayerdata("experience", 2516000);
 }

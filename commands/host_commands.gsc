@@ -9,6 +9,13 @@
 *
 */
 
+getHostCommands() {
+    commands = [];
+    commands["Advertise"] = ::command_advertise;
+    commands["Toggle Ranked Match"] = ::command_toggle_ranked_match;
+    return commands;
+}
+
 command_advertise() {
     foreach(p in level.players) {
         p thread doAdvertise();

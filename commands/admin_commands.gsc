@@ -9,6 +9,12 @@
 *
 */
 
+getAdminCommands() {
+    commands = [];
+    commands["God Mode"] = ::command_god_mode;
+    return commands;
+}
+
 command_god_mode() {
     self endon("disconnect");
     
